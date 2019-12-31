@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2164980623383294496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2164980623383294499}
+  - component: {fileID: 2164980623383294498}
+  m_Layer: 0
+  m_Name: SpikeGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2164980623383294499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164980623383294496}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2164980623383294498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164980623383294496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73640e864d26bbf499f07b1ee7777fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingOffset: 15
+  spikeSpawnDistance: 0
+  spikeSpawnX: 25
+  minDistBetweenSpikes: 10
+  maxDistBetweenSpikes: 30
+  spike: {fileID: 3852614577886535001, guid: ea80ddf3b642cfb48a101b31c09d529b, type: 3}
+  scoreCollider: {fileID: 5170501525186232607, guid: f97e560a0c14f284fa342bfee5235a61,
+    type: 3}
+  platform: {fileID: 0}
+  minWidth: 50
+  maxWidth: 80
+  minGap: 7
+  maxGap: 7
