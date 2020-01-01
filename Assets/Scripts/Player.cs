@@ -17,17 +17,16 @@ public class Player : MonoBehaviour
     [SerializeField] bool shortJump = false;
     [SerializeField] bool falling = false;
 
-    [SerializeField] ParticleSystem fireParticles;
-    public ParticleSystem spawnedFireParticles;
-    [SerializeField] ParticleSystem thrustParticles;
+
     [SerializeField] ParticleSystem explosionParticles;
+    [SerializeField]ParticleSystem fireParticles;
+    [SerializeField] ParticleSystem smokeParticle;
+
 
     AudioSource thrustAudioSource;
     AudioSource deathAudioSource;
     bool thrustAudioSourcePlaying = false;
 
-        
-    [SerializeField] Transform particleSpawn;
     [SerializeField] Rigidbody2D[] platforms;
     [SerializeField]GameSession gameSession;
     Singleton singleton;
@@ -50,7 +49,6 @@ public class Player : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         gameSession = FindObjectOfType<GameSession>();
-        if (!dead && !gameSession.GameRunning) spawnedFireParticles = Instantiate(fireParticles, particleSpawn.transform.position, Quaternion.identity);
         singleton = FindObjectOfType<Singleton>();
     }
     private void Update()
@@ -83,9 +81,17 @@ public class Player : MonoBehaviour
 
     private void SpawnThrustParticles()
     {
+        var fireEmission = fireParticles.emission;
+        var smokeEmission = smokeParticle.emission;
         if (rb.velocity.y > 0)
         {
-            Instantiate(thrustParticles, particleSpawn.transform.position, Quaternion.identity);
+            fireEmission.rateOverTime = 250f;
+            smokeEmission.rateOverTime = 25f;
+        }
+        else
+        {
+            fireEmission.rateOverTime = 5f;
+            smokeEmission.rateOverTime = 100f;
         }
     }
 

@@ -92,9 +92,7 @@ public class GameSession : MonoBehaviour
     {
         if (!gameRunning) gameRunning = true;
         playerRb.bodyType = RigidbodyType2D.Dynamic;
-        Destroy(player.spawnedFireParticles);
         mainMenu.enabled = false;
-
     }
     public void handleDeath()
     {
