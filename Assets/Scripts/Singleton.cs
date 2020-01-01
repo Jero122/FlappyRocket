@@ -9,9 +9,16 @@ public class Singleton : MonoBehaviour
 
     bool sfxEnabled = true;
     bool musicEnabled = true;
+    bool gfxQuality = true;
+
     private int accumulativePoints;
     private int highScore;
 
+    public bool GFXQuality
+    {
+        get { return gfxQuality; }
+        set { gfxQuality = value; }
+    }
     public bool SFXEnabled
     {
         get { return sfxEnabled; }

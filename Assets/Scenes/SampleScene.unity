@@ -772,7 +772,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Graphics - Good
+  m_text: Graphics - Quality
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b008664b4de0814c8cc24546e0392b1, type: 2}
   m_sharedMaterial: {fileID: 3303444283610435652, guid: 9b008664b4de0814c8cc24546e0392b1,
@@ -915,7 +915,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 629143331}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1370479450}
+        m_MethodName: ChangeGFXSettins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!224 &710766562 stripped
@@ -2394,6 +2405,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: platforms.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: platforms.Array.data[2]
+      value: 
+      objectReference: {fileID: 1902525324}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: platforms.Array.data[3]
+      value: 
+      objectReference: {fileID: 65773743}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: gameSession
+      value: 
+      objectReference: {fileID: 1370479450}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: platforms.Array.data[0]
+      value: 
+      objectReference: {fileID: 1902525324}
+    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
+        type: 3}
+      propertyPath: platforms.Array.data[1]
+      value: 
+      objectReference: {fileID: 65773743}
     - target: {fileID: 3034267801087703688, guid: 8c579ebd4119d824c88283abaa02cfb0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2449,36 +2490,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: platforms.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: platforms.Array.data[2]
-      value: 
-      objectReference: {fileID: 1902525324}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: platforms.Array.data[3]
-      value: 
-      objectReference: {fileID: 65773743}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: gameSession
-      value: 
-      objectReference: {fileID: 1370479450}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: platforms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1902525324}
-    - target: {fileID: 3034267801087703689, guid: 8c579ebd4119d824c88283abaa02cfb0,
-        type: 3}
-      propertyPath: platforms.Array.data[1]
-      value: 
-      objectReference: {fileID: 65773743}
     - target: {fileID: 3034267801087703686, guid: 8c579ebd4119d824c88283abaa02cfb0,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -3939,6 +3950,16 @@ PrefabInstance:
       propertyPath: SFXText
       value: 
       objectReference: {fileID: 2120872789}
+    - target: {fileID: 6086180760470020091, guid: f55bf8352491e0442b2454e0c022b1ea,
+        type: 3}
+      propertyPath: GFXText
+      value: 
+      objectReference: {fileID: 629143331}
+    - target: {fileID: 6086180760470020091, guid: f55bf8352491e0442b2454e0c022b1ea,
+        type: 3}
+      propertyPath: postprocessing
+      value: 
+      objectReference: {fileID: 113125976}
     - target: {fileID: 6086180760470020090, guid: f55bf8352491e0442b2454e0c022b1ea,
         type: 3}
       propertyPath: m_LocalPosition.x

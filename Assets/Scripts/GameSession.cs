@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Rendering.PostProcessing;
 
 public class GameSession : MonoBehaviour
 {
@@ -24,10 +25,12 @@ public class GameSession : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI MusicText;
     [SerializeField] TextMeshProUGUI SFXText;
-        
+    [SerializeField] TextMeshProUGUI GFXText;
+
     AudioSource musicAudioSource;
     [SerializeField] AudioClip[] scoreSounds;
     AudioSource pointsAudioSource;
+    [SerializeField] GameObject postprocessing;
 
     public bool GameRunning
     {
@@ -72,6 +75,16 @@ public class GameSession : MonoBehaviour
         else
         {
             SFXText.text = "Sounds - Off";
+        }
+        if (singleton.GFXQuality)
+        {
+            GFXText.text = "Graphics - Quality";
+            postprocessing.GetComponent<PostProcessVolume>().enabled = true;
+        }
+        else if (!singleton.GFXQuality)
+        {
+            GFXText.text = "Graphics - Performance";
+            postprocessing.GetComponent<PostProcessVolume>().enabled = false;
         }
 
     }
@@ -156,6 +169,22 @@ public class GameSession : MonoBehaviour
         {
             singleton.SFXEnabled = true;
             SFXText.text = "Sounds - On";
+        }
+    }
+    
+    public void ChangeGFXSettins()
+    {
+        if (GFXText.text == "Graphics - Quality")
+        {
+            singleton.GFXQuality = false;
+            GFXText.text = "Graphics - Performance";
+            postprocessing.GetComponent<PostProcessVolume>().enabled = false;
+        }
+        else if (GFXText.text == "Graphics - Performance")
+        {
+            singleton.GFXQuality = true;
+            GFXText.text = "Graphics - Quality";
+            postprocessing.GetComponent<PostProcessVolume>().enabled = true;
         }
     }
     public void HandleScoreGain()
