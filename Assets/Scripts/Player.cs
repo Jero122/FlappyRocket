@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
         {
             GetJumpInput();
             JumpImprovement();
-            //SpawnThrustParticles();
+            SpawnThrustParticles();
         }
         PlaythrustSFX();
     }
